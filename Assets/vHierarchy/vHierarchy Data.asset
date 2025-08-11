@@ -22,26 +22,21 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-277893361-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-254261364-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-227470134-0
-        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-5452258478349974535-0
         values:
-        - colorIndex: 6
+        - colorIndex: 3
+          iconNameOrGuid: Camera Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 3
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 6
-          iconNameOrGuid: 
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 6
-          iconNameOrGuid: 
+        - colorIndex: 3
+          iconNameOrGuid: AvatarMask On Icon
           isIconRecursive: 0
           isColorRecursive: 0
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: AvatarMask On Icon
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []

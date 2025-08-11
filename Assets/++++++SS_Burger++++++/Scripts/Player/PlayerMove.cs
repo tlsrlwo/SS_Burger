@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public NavMeshAgent navMeshAgent;
+    private Animator anim;
+
+    private void Start()
     {
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update()
+    {        
+        // 마우스 클릭 한 부분으로 이동
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if(Physics.Raycast(ray, out RaycastHit hit, 1000f))
+            {             
+                navMeshAgent.SetDestination(hit.point);               
+            }
+        }
+
+        // 애니메이션
+        float speed = navMeshAgent.velocity.magnitude;
+        anim.SetFloat("Speed", speed);
     }
 }
