@@ -30,11 +30,11 @@ MonoBehaviour:
         - colorIndex: 3
           iconNameOrGuid: 
           isIconRecursive: 0
-          isColorRecursive: 0
+          isColorRecursive: 1
         - colorIndex: 3
           iconNameOrGuid: AvatarMask On Icon
           isIconRecursive: 0
-          isColorRecursive: 0
+          isColorRecursive: 1
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
           isIconRecursive: 0

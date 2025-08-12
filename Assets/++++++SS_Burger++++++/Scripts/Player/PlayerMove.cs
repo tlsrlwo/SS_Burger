@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {        
-        // 마우스 클릭 한 부분으로 이동
+        // 마우스 클릭 한 부분으로 이동        
         if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
