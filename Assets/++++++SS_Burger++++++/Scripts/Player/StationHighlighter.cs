@@ -13,7 +13,7 @@ public class StationHighlighter : MonoBehaviour
     [SerializeField] private Transform selected;
 
     [Header("외곽선 설정값")]
-    [SerializeField] private Color _outlineColor = Color.magenta;
+    [SerializeField] private Color _outlineColor = Color.green;
     [SerializeField] private float _outlineWidth = 7.0f;
 
     private Transform lastHighlight;
@@ -83,7 +83,7 @@ public class StationHighlighter : MonoBehaviour
                 }
 
                 selected = hit.transform;                                                   // 새롭게 선택한 오브젝트를  selected 로 지정
-                var selectedStationOutline = selected.GetComponent<Outline>(); //&& selected.gameObject.AddComponent<Outline>();
+                var selectedStationOutline = selected.GetComponent<Outline>() ?? selected.gameObject.AddComponent<Outline>();
 
                 selectedStationOutline.OutlineColor = _outlineColor;
                 selectedStationOutline.OutlineWidth = _outlineWidth;

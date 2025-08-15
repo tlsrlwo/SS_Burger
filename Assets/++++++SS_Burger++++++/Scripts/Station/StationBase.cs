@@ -38,6 +38,6 @@ public abstract class StationBase : MonoBehaviour, IStation
     #endregion
    
     // 외부에서 잠금/해제할 수 있도록 공개
-    public void SetAvailale(bool value) => available = value; 
+    public void SetAvailable(bool value) => available = value; 
 
 }
