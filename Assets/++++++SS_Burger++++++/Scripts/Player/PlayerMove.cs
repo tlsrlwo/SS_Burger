@@ -17,17 +17,19 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float sampleMaxDistance = 1.0f;    // Ap 가 내비 밖일 때 스냅 반경
     [SerializeField] private int sampleAreaMask = NavMesh.AllAreas;
 
+    [Header("현재 스테이션")]
+    [SerializeField]private IStation currentStation;
+
     private NavMeshAgent agent;
     private Animator anim;
     private ArrivalDetector arrivalDetector;
 
-    private IStation currentStation;
-    private static readonly int SpeedHash = Animator.StringToHash("Speed");         // ??????굳이 SpeedHas 변수를 만드는 이유
+    private static readonly int SpeedHash = Animator.StringToHash("Speed");         // 메모리 사용랴을 절약하기 위해 SpeedHash 변수 생성
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        TryGetComponent(out anim);                                                  // ???
+        TryGetComponent(out anim);                                                  // animator 가 없어도 일단 원활히 실행되게끔
         arrivalDetector = GetComponent<ArrivalDetector>();
 
         if(arrivalDetector != null)
@@ -60,7 +62,7 @@ public class PlayerMove : MonoBehaviour
     {
         // 오류 방지
         if (!Input.GetMouseButtonDown(1)) return;                                               // 마우스 클릭 없으면 반환
-        if (ignoreUi && EventSystem.current.IsPointerOverGameObject()) return;                  // 
+        if (ignoreUi && EventSystem.current.IsPointerOverGameObject()) return;                  // Ui가 실행되어있거나, 마우스가 Ui 위에 있으면 반환
         if (Camera.main == null || agent == null) return;                                       // 카메라가 없고, navMesh 가 없으면 반환
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -71,12 +73,13 @@ public class PlayerMove : MonoBehaviour
 
         if(hit.transform != null)
         {
-            station = hit.transform.GetComponentInParent<IStation>();                           // stationBase 가 아니라 Istation???
+            station = hit.transform.GetComponentInParent<IStation>();                           // IStation 을 상속받는 컴포넌트를 반환해줘서 GetComponentInParent<IStation>
         }
 
         if(station != null)
         {
             MoveToStation(station);
+            return;
         }
 
 
