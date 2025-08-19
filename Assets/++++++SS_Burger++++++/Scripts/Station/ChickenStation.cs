@@ -7,6 +7,7 @@ public sealed class ChickenStation : StationBase
     [Header("치킨")]
     [SerializeField] private string stationName = "Chicken";        // 디버그 식별용
 
+    [SerializeField] private float gizmoRadius = 0.5f;
     protected override void Awake()
     {
         base.Awake();
@@ -50,7 +51,7 @@ public sealed class ChickenStation : StationBase
 
         if (ApproachPoint != null)
         {
-            Gizmos.DrawWireSphere(ApproachPoint.position, 1f);
+            Gizmos.DrawWireSphere(ApproachPoint.position, gizmoRadius);
             Gizmos.DrawLine(transform.position, ApproachPoint.position);
         }
     }

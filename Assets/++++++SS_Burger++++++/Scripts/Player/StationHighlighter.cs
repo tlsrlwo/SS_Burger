@@ -15,9 +15,14 @@ public class StationHighlighter : MonoBehaviour
     [Header("외곽선 설정값")]
     [SerializeField] private Color _outlineColor = Color.green;
     [SerializeField] private float _outlineWidth = 7.0f;
+    
+    [Header("도착 감지")]
+    [SerializeField] private ArrivalDetector arrivalDetector; 
 
     private Transform lastHighlight;
     private RaycastHit hit;
+
+
 
     private void Update()
     {
@@ -88,7 +93,7 @@ public class StationHighlighter : MonoBehaviour
                 selectedStationOutline.OutlineColor = _outlineColor;
                 selectedStationOutline.OutlineWidth = _outlineWidth;
                 selectedStationOutline.enabled = true;
-
+             
                 // lastHighlight 가 중복될 수 있으니
                 lastHighlight = null;
             }
@@ -99,7 +104,7 @@ public class StationHighlighter : MonoBehaviour
                     s.enabled = false;                                                      // 외곽선을 꺼줌
                 }
 
-                selected = null;                                                            // selected 를 없앰 (null)
+                selected = null;                                                            // selected 를 없앰 (null)          
             }
         }
     }
@@ -115,6 +120,21 @@ public class StationHighlighter : MonoBehaviour
         // 이전, 현재 다 제거 (null)
         highlighted = null;
         lastHighlight= null;
+    }
+
+    public void ClearSelection()
+    {
+        if(selected && selected.TryGetComponent<Outline>(out var s))
+        {
+            s.enabled = false;
+        }
+        selected = null; 
+    }
+
+    public void ClearAll()
+    {
+        ClearHighlight();
+        ClearSelection();
     }
 
 }

@@ -7,6 +7,8 @@ public sealed class ExpoStation : StationBase
     [Header("엑스포")]
     [SerializeField] private string stationName = "Expo";        // 디버그 식별용
 
+    [SerializeField] private float gizmoRadius = 0.5f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -50,7 +52,7 @@ public sealed class ExpoStation : StationBase
 
         if (ApproachPoint != null)
         {
-            Gizmos.DrawWireSphere(ApproachPoint.position, 1f);
+            Gizmos.DrawWireSphere(ApproachPoint.position, gizmoRadius);
             Gizmos.DrawLine(transform.position, ApproachPoint.position);
         }
     }

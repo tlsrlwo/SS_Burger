@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public sealed class BeverageStation : StationBase
@@ -7,6 +8,7 @@ public sealed class BeverageStation : StationBase
     [Header("베버리지")]
     [SerializeField] private string stationName = "Beverage";        // 디버그 식별용
 
+    [SerializeField] private float gizmoRadius = 0.5f;
     protected override void Awake()
     {
         base.Awake();
@@ -50,7 +52,7 @@ public sealed class BeverageStation : StationBase
 
         if (ApproachPoint != null)
         {
-            Gizmos.DrawWireSphere(ApproachPoint.position, 1f);
+            Gizmos.DrawWireSphere(ApproachPoint.position, gizmoRadius);
             Gizmos.DrawLine(transform.position, ApproachPoint.position);
         }
     }

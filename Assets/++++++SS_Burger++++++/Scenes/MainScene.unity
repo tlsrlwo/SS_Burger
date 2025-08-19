@@ -937,6 +937,7 @@ MonoBehaviour:
   approachPoint: {fileID: 787125336}
   startAvailable: 1
   stationName: Expo
+  gizmoRadius: 0.5
 --- !u!1 &92338267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10302,6 +10303,7 @@ MonoBehaviour:
   approachPoint: {fileID: 702856252}
   startAvailable: 1
   stationName: Beverage
+  gizmoRadius: 0.5
 --- !u!1 &1035528662
 GameObject:
   m_ObjectHideFlags: 0
@@ -16822,6 +16824,7 @@ MonoBehaviour:
   approachPoint: {fileID: 1163447330}
   startAvailable: 1
   stationName: Chicken
+  gizmoRadius: 0.5
 --- !u!1 &1686135024
 GameObject:
   m_ObjectHideFlags: 0
@@ -21372,12 +21375,12 @@ GameObject:
   - component: {fileID: 1986030565}
   - component: {fileID: 1986030566}
   m_Layer: 0
-  m_Name: StationHighlighter
+  m_Name: StationHighlighterTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1986030565
 Transform:
   m_ObjectHideFlags: 0
@@ -21409,6 +21412,7 @@ MonoBehaviour:
   selected: {fileID: 0}
   _outlineColor: {r: 0, g: 1, b: 0, a: 1}
   _outlineWidth: 7
+  arrivalDetector: {fileID: 0}
 --- !u!1 &1988772579
 GameObject:
   m_ObjectHideFlags: 0
@@ -27683,6 +27687,7 @@ MonoBehaviour:
   approachPoint: {fileID: 1235460487}
   startAvailable: 1
   stationName: Frier
+  gizmoRadius: 0.5
 --- !u!33 &3469287837090075849
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27746,6 +27751,7 @@ MonoBehaviour:
   approachPoint: {fileID: 656150045}
   startAvailable: 1
   stationName: Custard
+  gizmoRadius: 0.5
 --- !u!33 &3469287837246933478
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27854,6 +27860,7 @@ MonoBehaviour:
   approachPoint: {fileID: 1800640250}
   startAvailable: 1
   stationName: Grill
+  gizmoRadius: 0.5
 --- !u!33 &3469287838520247701
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31599,6 +31606,7 @@ GameObject:
   - component: {fileID: 5452258478349974539}
   - component: {fileID: 5452258478349974537}
   - component: {fileID: 5452258478349974540}
+  - component: {fileID: 5452258478349974541}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -31687,6 +31695,23 @@ MonoBehaviour:
   arriveTolerance: 0.15
   useApproachPointCheck: 0
   approachPointTolerance: 0.4
+--- !u!114 &5452258478349974541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452258478349974535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec321320f8031b2479a96db76bf2e40d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlighted: {fileID: 0}
+  selected: {fileID: 0}
+  _outlineColor: {r: 0, g: 1, b: 0, a: 1}
+  _outlineWidth: 7
+  arrivalDetector: {fileID: 0}
 --- !u!1 &5452259592324438395
 GameObject:
   m_ObjectHideFlags: 0
@@ -36985,6 +37010,7 @@ MonoBehaviour:
   approachPoint: {fileID: 794334956}
   startAvailable: 1
   stationName: Bun
+  gizmoRadius: 0.5
 --- !u!23 &8452125213385734224
 MeshRenderer:
   m_ObjectHideFlags: 0

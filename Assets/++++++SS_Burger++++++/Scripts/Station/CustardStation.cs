@@ -7,6 +7,7 @@ public sealed class CustardStation : StationBase
     [Header("커스터드")]
     [SerializeField] private string stationName = "Custard";        // 디버그 식별용
 
+    [SerializeField] private float gizmoRadius = 0.5f;
     protected override void Awake()
     {
         base.Awake();
@@ -44,13 +45,12 @@ public sealed class CustardStation : StationBase
 
         // 필요 시 정리 로직 (상호작용 해제, UI 닫기 등)
     }
-
     private void OnDrawGizmos()
     {
 
         if (ApproachPoint != null)
         {
-            Gizmos.DrawWireSphere(ApproachPoint.position, 1f);
+            Gizmos.DrawWireSphere(ApproachPoint.position, gizmoRadius);
             Gizmos.DrawLine(transform.position, ApproachPoint.position);
         }
     }

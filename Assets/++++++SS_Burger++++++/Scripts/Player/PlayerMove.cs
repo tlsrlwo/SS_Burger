@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour
     private Coroutine rotateCoroutine;
     
     private IStation currentStation;
+    private StationHighlighter highlighter;
 
     private NavMeshAgent agent;
     private Animator anim;
@@ -40,6 +41,7 @@ public class PlayerMove : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         TryGetComponent(out anim);                                                  // animator 가 없어도 일단 원활히 실행되게끔
         arrivalDetector = GetComponent<ArrivalDetector>();
+        highlighter = GetComponent<StationHighlighter>();
 
         if(arrivalDetector != null)
         {
@@ -177,8 +179,14 @@ public class PlayerMove : MonoBehaviour
             // 플레이어 몸 방향 정렬
             AlignPlayerToStation(station, events);
 
-            // 상호작용 동안 멈추고 싶다면 활성화
-            // agent.isStopped = true;
+            // 스테이션 외곽선 끄기
+            if (highlighter != null)
+            {
+                highlighter.ClearAll(); 
+            }
+
+            // 스테이션 도착 시 ui 나오게 하기
+            // staionUsingUi.enabled = true 뭐 이런식으로
         }
     }
 
