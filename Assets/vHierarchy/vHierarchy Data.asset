@@ -29,6 +29,13 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-919132149589279190-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1034589715-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-90348307-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1800640249-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-794334955-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1163447329-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-656150044-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-702856251-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-787125335-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1235460486-0
         values:
         - colorIndex: 3
           iconNameOrGuid: Camera Icon
@@ -71,6 +78,34 @@ MonoBehaviour:
           isIconRecursive: 0
           isColorRecursive: 0
         - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0

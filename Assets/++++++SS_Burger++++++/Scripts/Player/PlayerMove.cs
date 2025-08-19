@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -17,7 +18,15 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float sampleMaxDistance = 1.0f;    // Ap 가 내비 밖일 때 스냅 반경
     [SerializeField] private int sampleAreaMask = NavMesh.AllAreas;
 
-    [Header("현재 스테이션")]
+    [Header("플레이어 회전 관련")]
+    [SerializeField] private bool rotateOnArrive = true;        
+    [SerializeField] private bool smoothRotate = true;
+    [SerializeField] private float rotateSpeed = 5f;
+    [SerializeField] private float angleSnap = 0.1f;
+    //[SerializeField] private bool lockFacingDuringInteraction = true;
+
+    private Coroutine rotateCoroutine;
+    
     private IStation currentStation;
 
     private NavMeshAgent agent;
@@ -147,22 +156,107 @@ public class PlayerMove : MonoBehaviour
     private void MoveToPoint(Vector3 worldPoint)
     {
         if (agent == null) return;
+
+        // 스테이션에 도착해서 회전하고 있으면 끊기
+        StopRotationCoroutine();
+        EnableAutoRotation();
+
         agent.isStopped = false;
         agent.SetDestination(worldPoint);
     }
 
     // 스테이션에 도착
-    private void HandleArrived(ArrivalDetector.ArrivalEvents e)
+    private void HandleArrived(ArrivalDetector.ArrivalEvents events)
     {
         // Context 로 실어둔 스테이션
-        if (e.Context is IStation station && currentStation == station)
+        if (events.Context is IStation station && currentStation == station)
         {
-            station.OnPlayerArrive(gameObject, e);
+            // 스테이션에 플레이어가 도착함을 알림
+            station.OnPlayerArrive(gameObject, events);
+
+            // 플레이어 몸 방향 정렬
+            AlignPlayerToStation(station, events);
 
             // 상호작용 동안 멈추고 싶다면 활성화
             // agent.isStopped = true;
         }
     }
+
+    #region 플레이어 스테이션 도착 시 회전관련
+    private void AlignPlayerToStation(IStation station, ArrivalDetector.ArrivalEvents events)
+    {
+        // 버그 방지
+        if (!rotateOnArrive || station == null) return;
+
+        DisableAutoRotation();
+        Quaternion targetRot;
+        
+        // 지정된 ApproachPoint 가 있음
+        if(station.ApproachPoint != null)
+        {
+            targetRot = station.ApproachPoint.rotation;
+        }
+        // 지정된 ApproachPoint 가 없음
+        else
+        {
+            Vector3 dir = station.Root.position - transform.position;
+            dir.y = 0;
+            if (dir.sqrMagnitude < 0.0001) return;
+            targetRot = Quaternion.LookRotation(dir.normalized);            // 방향값만 1로 남겨둔 방향값을 기준으로 회전을 구함
+
+        }
+
+        StopRotationCoroutine();
+        // 부드럽게 돌지 아니면 그냥 바로 방향을 바꿀지
+        if (smoothRotate)
+        {            
+            rotateCoroutine = StartCoroutine(CoSmoothRotate(targetRot));
+        }
+        else
+        {
+            transform.rotation = targetRot;
+        }
+    }
+
+    // 부드럽게 플레이어를 스테이션을 바라보는 각도로 돌리는 부분
+    private IEnumerator CoSmoothRotate(Quaternion targetRot)
+    {
+        // 목표와 현재 회전의 차이가 0.1도 이하가 될 때까지 반복
+        while (Quaternion.Angle(transform.rotation, targetRot) > angleSnap)
+        {
+            // 현재 회전 → 목표 회전 사이를 부드럽게 보간
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRot,
+                Time.deltaTime * rotateSpeed   // rotateSpeed는 감속 강도, 숫자 키우면 빠르게 회전
+            );
+            yield return null; // 한 프레임 쉰 뒤 다시 반복
+        }
+
+        // 마지막에 딱 맞춰 고정
+        transform.rotation = targetRot;
+        rotateCoroutine = null;
+    }
+      
+
+    private void EnableAutoRotation()
+    {
+        if (agent != null) agent.updateRotation = true;
+    }
+    private void DisableAutoRotation()
+    {
+        if (agent != null) agent.updateRotation = false;
+    }
+
+    private void StopRotationCoroutine()
+    {
+        if (rotateCoroutine != null)
+        {
+            StopCoroutine(rotateCoroutine);
+            rotateCoroutine = null;
+        }
+    }
+    #endregion
 
     // 현재 스테이션과의 링크 해제 + 이탈 알림
     private void ClearCurrentStation()
@@ -172,6 +266,10 @@ public class PlayerMove : MonoBehaviour
             currentStation.OnPlayerLeave(gameObject);
             currentStation = null;
         }
+
+        // 상호작용 종료 -> 회전 고정 해제
+        StopRotationCoroutine();
+        EnableAutoRotation();
     }
 
 }
