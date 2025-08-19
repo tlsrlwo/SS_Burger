@@ -7,7 +7,7 @@ public abstract class StationBase : MonoBehaviour, IStation
     [Header("스테이션 공용")]
     [SerializeField] private string stationId = "Station";
     [SerializeField] private Transform approachPoint;
-    [SerializeField] private bool startAvailable = false;
+    [SerializeField] private bool startAvailable = true;
 
     protected bool available;
 

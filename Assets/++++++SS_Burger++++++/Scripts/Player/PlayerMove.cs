@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private int sampleAreaMask = NavMesh.AllAreas;
 
     [Header("현재 스테이션")]
-    [SerializeField]private IStation currentStation;
+    private IStation currentStation;
 
     private NavMeshAgent agent;
     private Animator anim;
@@ -60,28 +60,44 @@ public class PlayerMove : MonoBehaviour
     // 마우스 클릭에 따른 이동
     private void HandleClickMove()
     {
-        // 오류 방지
-        if (!Input.GetMouseButtonDown(1)) return;                                               // 마우스 클릭 없으면 반환
-        if (ignoreUi && EventSystem.current.IsPointerOverGameObject()) return;                  // Ui가 실행되어있거나, 마우스가 Ui 위에 있으면 반환
-        if (Camera.main == null || agent == null) return;                                       // 카메라가 없고, navMesh 가 없으면 반환
+        // 오류 방지        
+        // 마우스 클릭 없으면 반환
+        if (!Input.GetMouseButtonDown(1)) return; 
+
+        // Ui가 실행되어있거나, 마우스가 Ui 위에 있으면 반환
+        if (ignoreUi && EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+
+        // 카메라가 없고, navMesh 가 없으면 반환
+        if (Camera.main == null || agent == null) return;
+
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out RaycastHit hit, rayDistance, raycastMask)) return;
 
-        // 스테이션 클릭 여부 자식 메시도 커버 : 부모에서 IStation 탐색함)
-        IStation station = null;
+        // 스테이션 클릭 여부, 자식 메시도 커버 : 부모에서 IStation 탐색함)
+        IStation clickedStation = null;
 
         if(hit.transform != null)
         {
-            station = hit.transform.GetComponentInParent<IStation>();                           // IStation 을 상속받는 컴포넌트를 반환해줘서 GetComponentInParent<IStation>
+            clickedStation = hit.transform.GetComponentInParent<IStation>();                           // IStation 을 상속받는 컴포넌트를 반환해줘서 GetComponentInParent<IStation>
         }
 
-        if(station != null)
+        if(clickedStation != null)
         {
-            MoveToStation(station);
+            // 현재 선택된 스테이션이 있고, 지금 누른 스테이션이 아닐 시 (기존 스테이션 있는 상태에서 다른 스테이션으로 이동(스테이션에서 스테이션으로 이동 시 OnPlayerLeave() 가 안뜨는 현상 수정))
+            if (currentStation != null && currentStation != clickedStation)          
+            {
+                // 이전 스테이션에서의 이탈 선언
+                currentStation.OnPlayerLeave(gameObject);
+
+                // 이전 도착 감지 해제
+                arrivalDetector.Disarm();
+                currentStation = null;
+            }
+
+            MoveToStation(clickedStation);
             return;
         }
-
 
         // 일반 지점 이동       
         ClearCurrentStation();                                              // 기존 상호작용 해제
@@ -94,14 +110,18 @@ public class PlayerMove : MonoBehaviour
     {
         if (station == null || agent == null) return;
 
-        // 사용 가능 여부 확인
+        // 플레이어의 스테이션 사용 가능 여부 확인
         if (!station.CanPlayerUse(gameObject))
         {
-            // 필요 시 안내 UI/사운드 처리 기능-------------
-            ClearCurrentStation();
+            // 현재 플레이어가 스테이션을 사용할 수 없다는 Ui 표시
+            Debug.Log("현재 해당 스테이션은 이용 할 수 없습니다");
+
+            // ClearCurrentStation 보다는 현재 플레이어 상태 유지/무동작이 더 자연스러움
+            // ClearCurrentStation();
             return;
         }
-
+        
+        // 같은 스테이션을 다시 클릭해도 목적지 갱신 (다시 Arm() 됨)
         currentStation = station;
 
         // ApproachPoint가 있으면 approachPoint 로 가고, 없으면 스테이션의 root.position 으로 이동
@@ -117,7 +137,10 @@ public class PlayerMove : MonoBehaviour
         MoveToPoint(target);
 
         // 도착 감지 Arm (Context에 station 자체를 넣음)
-        arrivalDetector.Arm(station.ApproachPoint, station, true);                  // ApproachPoint ???? Arm 함수 뭔 뜻이지
+        if (arrivalDetector != null)
+        {
+            arrivalDetector.Arm(station.ApproachPoint, station, true);
+        }
     }
 
     // 스테이션이 아닌 곳으로의 이동

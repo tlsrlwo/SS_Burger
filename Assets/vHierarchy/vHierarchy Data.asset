@@ -22,6 +22,13 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-277893361-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-254261364-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-227470134-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-919132148265175374-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-5328780013792097252-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1655846731-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-919132149007793278-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-919132149589279190-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1034589715-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-90348307-0
         values:
         - colorIndex: 3
           iconNameOrGuid: Camera Icon
@@ -37,6 +44,34 @@ MonoBehaviour:
           isColorRecursive: 1
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 4
+          iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []

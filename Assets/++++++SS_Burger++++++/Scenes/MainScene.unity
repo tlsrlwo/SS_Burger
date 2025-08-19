@@ -808,8 +808,9 @@ GameObject:
   - component: {fileID: 90348309}
   - component: {fileID: 90348311}
   - component: {fileID: 90348312}
+  - component: {fileID: 90348313}
   m_Layer: 0
-  m_Name: Station_KitchenTable
+  m_Name: Station_Expo
   m_TagString: Station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +828,8 @@ Transform:
   m_LocalPosition: {x: 8.83, y: 0, z: 22.48}
   m_LocalScale: {x: 5.2075996, y: 4, z: 4.8592}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 787125336}
   m_Father: {fileID: 866418234}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!23 &90348309
@@ -919,6 +921,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &90348313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90348307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5039cf18b192aa45a72953612a26a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Expo_01
+  approachPoint: {fileID: 787125336}
+  startAvailable: 1
+  stationName: Expo
 --- !u!1 &92338267
 GameObject:
   m_ObjectHideFlags: 0
@@ -7287,6 +7305,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650478163}
   m_Mesh: {fileID: -3121637305176430214, guid: 03aa99419670d9840a32509ff44e82f8, type: 3}
+--- !u!1 &656150044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656150045}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &656150045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656150044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.735}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450653307525996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &676848966
 GameObject:
   m_ObjectHideFlags: 0
@@ -7580,6 +7629,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683756316}
   m_Mesh: {fileID: -5510455866052545937, guid: 03aa99419670d9840a32509ff44e82f8, type: 3}
+--- !u!1 &702856251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702856252}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702856252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702856251}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1034589716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708287394
 GameObject:
   m_ObjectHideFlags: 0
@@ -8280,6 +8360,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771756415}
   m_Mesh: {fileID: 4300004, guid: 013043932069e224e90b516d38cdab48, type: 3}
+--- !u!1 &787125335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787125336}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787125336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787125335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 90348308}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &787456971
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,6 +8601,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787465224}
   m_Mesh: {fileID: -7899294396964687507, guid: 03aa99419670d9840a32509ff44e82f8, type: 3}
+--- !u!1 &794334955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794334956}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794334956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794334955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4144989898130587413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &801965926
 GameObject:
   m_ObjectHideFlags: 0
@@ -10028,6 +10170,7 @@ GameObject:
   - component: {fileID: 1034589717}
   - component: {fileID: 1034589719}
   - component: {fileID: 1034589720}
+  - component: {fileID: 1034589721}
   m_Layer: 0
   m_Name: Station_Beverage
   m_TagString: Station
@@ -10048,6 +10191,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4.4464}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 702856252}
   - {fileID: 1859732680}
   - {fileID: 77404792}
   - {fileID: 3106077727483869350}
@@ -10142,6 +10286,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1034589721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034589715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242710b742850c24182e682435f620af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Beverage_01
+  approachPoint: {fileID: 702856252}
+  startAvailable: 1
+  stationName: Beverage
 --- !u!1 &1035528662
 GameObject:
   m_ObjectHideFlags: 0
@@ -11499,6 +11659,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6000004, y: 1.364271, z: 0.7670991}
   m_Center: {x: 0, y: 0.6754152, z: -0.016450126}
+--- !u!1 &1163447329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163447330}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163447330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163447329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1655846732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167982039
 GameObject:
   m_ObjectHideFlags: 0
@@ -12298,6 +12489,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228636250}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1235460486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235460487}
+  m_Layer: 0
+  m_Name: ApproachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235460487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235460486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: 0, z: 0.792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450652679890628}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245661148
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,7 +13286,7 @@ GameObject:
   - component: {fileID: 1301164719}
   - component: {fileID: 1301164718}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: NavMeshSurface_Customizing_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16471,6 +16693,7 @@ GameObject:
   - component: {fileID: 1655846735}
   - component: {fileID: 1655846734}
   - component: {fileID: 1655846737}
+  - component: {fileID: 1655846738}
   m_Layer: 0
   m_Name: Station_Chicken
   m_TagString: Station
@@ -16490,7 +16713,8 @@ Transform:
   m_LocalPosition: {x: 12.9, y: 0, z: 11.7028}
   m_LocalScale: {x: 3.8000336, y: 4, z: 5.1076}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1163447330}
   m_Father: {fileID: 1245661149}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1655846734
@@ -16582,6 +16806,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1655846738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655846731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44012cbceff251a4098d6f2dcf0317e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Chicken_01
+  approachPoint: {fileID: 1163447330}
+  startAvailable: 1
+  stationName: Chicken
 --- !u!1 &1686135024
 GameObject:
   m_ObjectHideFlags: 0
@@ -17995,7 +18235,7 @@ Transform:
   m_GameObject: {fileID: 1800640249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 0, z: 0.63}
+  m_LocalPosition: {x: -0.75, y: 0, z: 0.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23032,10 +23272,10 @@ Transform:
   m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1800640250}
   - {fileID: 9039223737631277506}
   - {fileID: 7285479980841093994}
   - {fileID: 412653727}
-  - {fileID: 1800640250}
   m_Father: {fileID: 1245661149}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &543450652551879471
@@ -23066,6 +23306,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1235460487}
   - {fileID: 222508256818784840}
   - {fileID: 6428683975580493968}
   - {fileID: 7282917663578531131}
@@ -23086,6 +23327,7 @@ Transform:
   m_LocalScale: {x: 6.5644, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 656150045}
   - {fileID: 2065946559630813160}
   - {fileID: 6943505891151724908}
   m_Father: {fileID: 866418234}
@@ -23538,7 +23780,7 @@ GameObject:
   - component: {fileID: 3469287838447803476}
   - component: {fileID: 3469287838447803475}
   m_Layer: 0
-  m_Name: Station_Grill1
+  m_Name: Station_Grill
   m_TagString: Station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23557,8 +23799,9 @@ GameObject:
   - component: {fileID: 1711813856091676075}
   - component: {fileID: 3469287836664949090}
   - component: {fileID: 3469287836664949092}
+  - component: {fileID: 3469287836664949093}
   m_Layer: 0
-  m_Name: Station_Frier1
+  m_Name: Station_Frier
   m_TagString: Station
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23614,6 +23857,7 @@ GameObject:
   - component: {fileID: 1711813855510175747}
   - component: {fileID: 3469287837090075850}
   - component: {fileID: 3469287837090075851}
+  - component: {fileID: 3469287837090075852}
   m_Layer: 0
   m_Name: Station_Custard
   m_TagString: Station
@@ -27423,6 +27667,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &3469287836664949093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149007793278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e62cf63f48d9d40a9276416d5ff71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Frier_01
+  approachPoint: {fileID: 1235460487}
+  startAvailable: 1
+  stationName: Frier
 --- !u!33 &3469287837090075849
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27470,6 +27730,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &3469287837090075852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149589279190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ed761aa847c35488eb354e79271be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Custard_01
+  approachPoint: {fileID: 656150045}
+  startAvailable: 1
+  stationName: Custard
 --- !u!33 &3469287837246933478
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27574,10 +27850,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49da329889e5584ab9066c451b0fb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stationId: Station
+  stationId: Grill_01
   approachPoint: {fileID: 1800640250}
   startAvailable: 1
-  grillName: Grill
+  stationName: Grill
 --- !u!33 &3469287838520247701
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28748,7 +29024,8 @@ Transform:
   m_LocalPosition: {x: 12.8996, y: 0, z: 23.5443}
   m_LocalScale: {x: 4.0304, y: 4, z: 5.1076}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 794334956}
   m_Father: {fileID: 1245661149}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &4154652796438347920
@@ -30493,6 +30770,7 @@ GameObject:
   - component: {fileID: 5603409857721235990}
   - component: {fileID: 8444988093704042565}
   - component: {fileID: 8444988093704042566}
+  - component: {fileID: 8444988093704042567}
   m_Layer: 0
   m_Name: Station_Bun
   m_TagString: Station
@@ -36687,6 +36965,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &8444988093704042567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328780013792097252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49c268f11abe394d8b84bd9a09aab5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationId: Bun_01
+  approachPoint: {fileID: 794334956}
+  startAvailable: 1
+  stationName: Bun
 --- !u!23 &8452125213385734224
 MeshRenderer:
   m_ObjectHideFlags: 0

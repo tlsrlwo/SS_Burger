@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class GrillStation : StationBase
+public sealed class FrierStation : StationBase
 {
-    [Header("그릴")]
-    [SerializeField] private string stationName = "Grill";        // 디버그 식별용
+    [Header("프라이")]
+    [SerializeField] private string stationName = "Frier";        // 디버그 식별용
 
     protected override void Awake()
     {
@@ -28,31 +28,29 @@ public sealed class GrillStation : StationBase
 
         var playerName = player != null ? player.name : "Unknown";
 
-        Debug.Log($"[GrillStation] ' {playerName} ' 이(가) ' {stationName} '(StationID = {StationID}' 에 도착함." + 
+        Debug.Log($"[FrierStation] ' {playerName} ' 이(가) ' {stationName} '(StationID = {StationID}' 에 도착함." +
             $"AP={(ApproachPoint != null ? ApproachPoint.name : "null")}, Pos = {events.Position}, t = {events.Time:0.00}");
-        
+
         // Todo 
         // 씬 전환 트리거
-        
+
     }
 
     public override void OnPlayerLeave(GameObject player)
     {
         var playerName = player != null ? player.name : "Unknown";
 
-        Debug.Log($"[GrillStation] Player '{playerName}' 가 Grill '{stationName}' (StationID='{StationID}') 에서 이탈함. ");
+        Debug.Log($"[FrierStation] Player '{playerName}' 가 Frier '{stationName}' (StationID='{StationID}') 에서 이탈함. ");
 
         // 필요 시 정리 로직 (상호작용 해제, UI 닫기 등)
     }
 
     private void OnDrawGizmos()
     {
-
-        if(ApproachPoint != null)
+        if (ApproachPoint != null)
         {
             Gizmos.DrawWireSphere(ApproachPoint.position, 1f);
             Gizmos.DrawLine(transform.position, ApproachPoint.position);
         }
     }
-
 }
