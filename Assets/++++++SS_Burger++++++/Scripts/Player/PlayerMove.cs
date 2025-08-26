@@ -154,7 +154,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    // 스테이션이 아닌 곳으로의 이동
+    // 정해진 좌표로의 이동 (스테이션에서 사용)
     private void MoveToPoint(Vector3 worldPoint)
     {
         if (agent == null) return;

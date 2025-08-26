@@ -68,6 +68,13 @@ public class ArrivalDetector : MonoBehaviour
 
         // ApproachPointCheck 정밀확인
         // 이따 해보자고
+        //if (useApproachPointCheck && _approachPoint != null)
+        //{
+        //    float d = Vector3.Distance(transform.position, _approachPoint.position);
+        //    if (d > approachPointTolerance) return;
+        //}
+
+        
 
         // 한 번만 실행되도록 이해제 후 이벤트 호출 ?
         _armed = false;
