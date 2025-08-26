@@ -110,7 +110,7 @@ public class StationInventory : ScriptableObject
     }
 
 #if UNITY_EDITOR
-    // 에디터에서 갑 수정 시 리스트-맵 정합성 유지(선택적)
+    // 에디터에서 값 수정 시 리스트-맵 정합성 유지(선택적)
     private void OnValidate() // ?? 이건 무슨 함수지
     {
         // 플레이 중 변경은 런타임 로직이 처리하므로, 에디터 상태에서만 정리
