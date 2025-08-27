@@ -5901,9 +5901,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22169a74263626a4e86dedd9d7370d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToDoLists: "\uC544\uC774\uD15C\uCC3D\uC5D0\uC11C \uB4DC\uB798\uADF8 & \uB4DC\uB86D
+  ToDoLists: "> \uC544\uC774\uD15C\uCC3D\uC5D0\uC11C \uB4DC\uB798\uADF8 & \uB4DC\uB86D
     \uD574\uC11C \uBC88 \uC704\uB85C \uC62C\uB9AC\uBA74 \uC870\uB9AC \uCE74\uC6B4\uD2B8
-    \uC2DC\uC791\n"
+    \uC2DC\uC791 \n> \uAE30\uC874 \uBC88 \uC81C\uAC70 & \uCE58\uD0A8 \uBC84\uAC70
+    \uBAA8\uC591 \uC624\uBE0C\uC81D\uD2B8 \uC0DD\uC131\n> \uCE74\uC6B4\uD2B8 \uB2E4\uC6B4
+    \uC2DC\uC791 \uD6C4 3~5 \uCD08 \uC9C0\uB098\uBA74 \uBA54\uC778 \uC52C\uC73C\uB85C
+    \uC804\uD658\n> CanPlayerUse = false \uCC98\uB9AC\n\n"
 --- !u!1 &1457797996
 GameObject:
   m_ObjectHideFlags: 0

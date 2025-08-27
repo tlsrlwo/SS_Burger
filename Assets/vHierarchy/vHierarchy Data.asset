@@ -42,6 +42,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-702856251-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-787125335-0
         - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1235460486-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8d7ec396791c61049a12d4865fb5ad0a-1094878739-0
         values:
         - colorIndex: 3
           iconNameOrGuid: Camera Icon
@@ -115,6 +116,10 @@ MonoBehaviour:
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
     - goDatas_byGlobalId:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-055d366ad8624f04683d5c7b0bc6be7d-531773191-0
@@ -125,6 +130,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-055d366ad8624f04683d5c7b0bc6be7d-296863516-0
         - globalObjectIdString: GlobalObjectId_V1-2-055d366ad8624f04683d5c7b0bc6be7d-326325892-0
         - globalObjectIdString: GlobalObjectId_V1-2-055d366ad8624f04683d5c7b0bc6be7d-399865831-0
+        - globalObjectIdString: GlobalObjectId_V1-2-055d366ad8624f04683d5c7b0bc6be7d-22211745-0
         values:
         - colorIndex: 6
           iconNameOrGuid: 
@@ -156,6 +162,10 @@ MonoBehaviour:
           isColorRecursive: 0
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
     - goDatas_byGlobalId:
@@ -167,6 +177,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-588fd8e3f12ceb04cbfbe66daa476c2c-2038744503-0
         - globalObjectIdString: GlobalObjectId_V1-2-588fd8e3f12ceb04cbfbe66daa476c2c-489105806-0
         - globalObjectIdString: GlobalObjectId_V1-2-588fd8e3f12ceb04cbfbe66daa476c2c-1717091823-0
+        - globalObjectIdString: GlobalObjectId_V1-2-588fd8e3f12ceb04cbfbe66daa476c2c-75868267-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
@@ -193,6 +204,10 @@ MonoBehaviour:
           isIconRecursive: 0
           isColorRecursive: 0
         - colorIndex: 3
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
@@ -254,12 +269,17 @@ MonoBehaviour:
         keys:
         - globalObjectIdString: GlobalObjectId_V1-2-1eeaf69ed6f855d4bb39c8dc28cb6a13-869867063-0
         - globalObjectIdString: GlobalObjectId_V1-2-1eeaf69ed6f855d4bb39c8dc28cb6a13-1820573374-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1eeaf69ed6f855d4bb39c8dc28cb6a13-1320782074-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
           isIconRecursive: 0
           isColorRecursive: 0
         - colorIndex: 6
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0

@@ -3517,7 +3517,7 @@ GameObject:
   - component: {fileID: 2076806681}
   - component: {fileID: 2076806682}
   m_Layer: 0
-  m_Name: todo
+  m_Name: To Do
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3550,7 +3550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22169a74263626a4e86dedd9d7370d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToDoLists: "\uC778\uBCA4\uD1A0\uB9AC\uC5D0\uC11C \uCEF5\uC744 \u3137"
+  ToDoLists: "> \uC778\uBCA4\uD1A0\uB9AC\uC5D0\uC11C \uCEF5\uC744 \uB4DC\uB798\uACE0
+    & \uB4DC\uB86D \uD558\uBA74 \uC9C0\uC815 \uC704\uCE58\uB85C \uC774\uB3D9 > \uBC14\uB85C
+    \uC74C\uB8CC\uC218\uAC00 \uB098\uC624\uB294 \uB4EF\uD55C \uC560\uB2C8\uBA54\uC774\uC158\n>
+    \uC870\uB9AC \uCE74\uC6B4\uD2B8\uB2E4\uC6B4 \uC2DC\uC791\n> 3~5 \uCD08 \uD6C4
+    \uBA54\uC778 \uD654\uBA74\uC73C\uB85C \uC804\uD658\n> CanPlayerUse = false"
 --- !u!1 &2098306186
 GameObject:
   m_ObjectHideFlags: 0

@@ -205,6 +205,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4015297}
   m_Mesh: {fileID: -7349804031203401791, guid: 1de4648974aec0b408aacb9f0f50839a, type: 3}
+--- !u!1 &22211745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 22211747}
+  - component: {fileID: 22211746}
+  m_Layer: 0
+  m_Name: To Do
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &22211746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22211745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22169a74263626a4e86dedd9d7370d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDoLists: "> \uC544\uC774\uD15C \uD504\uB77C\uC774 \uC704\uCE58\uB85C \uB4DC\uB798\uADF8
+    & \uB4DC\uB86D\n> \uAE30\uB984 \uC548\uC5D0 \uD504\uB77C\uC774\uAE30 \uB4E4\uC5B4\uAC00\uB294
+    \uC560\uB2C8\uBA54\uC774\uC158 & \uAE30\uB984 \uD6A8\uACFC\n> \uCE74\uC6B4\uD2B8\uB2E4\uC6B4
+    \uC2DC\uC791\n> 3~5\uCD08 \uB4A4 \uBA54\uC778 \uC52C\uC73C\uB85C \uC804\uD658\n>
+    CanPlayerUse = false"
+--- !u!4 &22211747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22211745}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35822640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,3 +6004,4 @@ SceneRoots:
   - {fileID: 1748027376}
   - {fileID: 945720528}
   - {fileID: 2261522629592982831}
+  - {fileID: 22211747}

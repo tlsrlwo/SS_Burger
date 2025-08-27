@@ -238,6 +238,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64049026}
   m_Mesh: {fileID: 6094356633314625546, guid: 680d63569e6e6a04986d59264e33e018, type: 3}
+--- !u!1 &75868267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75868269}
+  - component: {fileID: 75868268}
+  m_Layer: 0
+  m_Name: To Do
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75868268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75868267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22169a74263626a4e86dedd9d7370d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDoLists: "> \uC2A4\uCFF1\uC744 \uCEE4\uC2A4\uD130\uB4DC\uB85C \uB4DC\uB798\uADF8
+    & \uB4DC\uB86D\n> \uCE74\uC6B4\uD2B8\uB2E4\uC6B4 \uC2DC\uC791 \n> \uD654\uBA74\uC5D0
+    \uC544\uC774\uC2A4\uD06C\uB9BC\uC774 \uB9CC\uB4E4\uC5B4\uC9C0\uB294 \uC560\uB2C8\uBA54\uC774\uC158\n>
+    3~5 \uCD08 \uB4A4\uC5D0 \uBA54\uC778 \uC52C\uC73C\uB85C \uC804\uD658\n> CanPlayerUse
+    = false"
+--- !u!4 &75868269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75868267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.842674, y: 6.5194716, z: 24.23274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249885278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,3 +4008,4 @@ SceneRoots:
   - {fileID: 2987164094107650014}
   - {fileID: 64049027}
   - {fileID: 395042697}
+  - {fileID: 75868269}
