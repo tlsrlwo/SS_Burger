@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99465501f0815e74a9276aec1f7d38a1, type: 3}
   m_Name: Expo_Definition
   m_EditorClassIdentifier: 
-  stationId: StationID
-  stationType: 0
-  displayName: StationName
-  baseCookTimeSeconds: 45
-  inputItemId: input item name
-  outputItemId: output item name
+  stationId: Expo_01
+  stationType: 6
+  displayName: Expo
+  baseCookTimeSeconds: 15
+  inputItemId: Menu_base
+  outputItemId: Menu_ready
