@@ -11,6 +11,10 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] private GameObject ghostItem;  // 고스트 아이템
     [SerializeField] private Canvas canvas;         // 캔버스
 
+    [SerializeField] private Image droppableArea;
+
+    public GameObject GhostItem { get { return ghostItem; } }
+
     public void Awake()
     {
         // 캔버스 할당
@@ -51,7 +55,16 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (ghostItem != null)
         {
+
             ghostItem.transform.position = eventData.position;
+
+            // 고스트 드래그 시작 시, cooking Area 표시
+            if (droppableArea != null && droppableArea.gameObject.CompareTag("Droppable Area"))
+            {
+                droppableArea.gameObject.SetActive(true);
+            }
+
+
         }
 
         Debug.Log("ing");
@@ -62,6 +75,7 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (ghostItem != null)
         {
             Destroy(ghostItem);
+            droppableArea.gameObject.SetActive(false);
         }
 
         Debug.Log("end");
